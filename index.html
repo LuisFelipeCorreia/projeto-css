@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Box Model & Flexbox Responsivo | Aula 07</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topo-flex">
+    <div class="logo-inline">
+      <span class="badge-inline">Aula 07 • CSS3 Puro</span>
+      <h1>Box Model (20 Elementos) &amp; Flexbox (20 Propriedades)</h1>
+    </div>
+    <nav class="nav-flex">
+      <a href="#box-model">Box Model</a>
+      <a href="#flexbox">Flexbox Lab</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- SEÇÃO 1: 20 ELEMENTOS COM CONTENT, PADDING, BORDER E MARGIN -->
+    <section id="box-model" class="secao">
+      <h2>1. Demonstração do Box Model (20 Elementos)</h2>
+      <p class="subtitulo">
+        Cada elemento abaixo possui valores explícitos de <strong>Content (width/height)</strong>,
+        <strong>Padding</strong>, <strong>Border</strong> e <strong>Margin</strong> no arquivo <code>style.css</code>.
+      </p>
+
+      <div class="box-grid">
+        <div class="box-item box-01"><strong>#01</strong><span>W:140px H:90px | P:8px | B:2px | M:4px</span></div>
+        <div class="box-item box-02"><strong>#02</strong><span>W:145px H:92px | P:10px | B:2px | M:5px</span></div>
+        <div class="box-item box-03"><strong>#03</strong><span>W:150px H:94px | P:12px | B:3px | M:6px</span></div>
+        <div class="box-item box-04"><strong>#04</strong><span>W:155px H:96px | P:14px | B:3px | M:7px</span></div>
+        <div class="box-item box-05"><strong>#05</strong><span>W:160px H:98px | P:16px | B:4px | M:8px</span></div>
+        <div class="box-item box-06"><strong>#06</strong><span>W:140px H:100px | P:8px 14px | B:2px dashed | M:6px</span></div>
+        <div class="box-item box-07"><strong>#07</strong><span>W:145px H:100px | P:10px 16px | B:3px dotted | M:7px</span></div>
+        <div class="box-item box-08"><strong>#08</strong><span>W:150px H:100px | P:12px 18px | B:4px double | M:8px</span></div>
+        <div class="box-item box-09"><strong>#09</strong><span>W:155px H:102px | P:14px 10px | B:2px solid | M:9px</span></div>
+        <div class="box-item box-10"><strong>#10</strong><span>W:160px H:104px | P:16px 12px | B:3px solid | M:10px</span></div>
+        <div class="box-item box-11"><strong>#11</strong><span>W:142px H:95px | P:9px | B:2px solid | M:5px 10px</span></div>
+        <div class="box-item box-12"><strong>#12</strong><span>W:148px H:95px | P:11px | B:3px dashed | M:6px 12px</span></div>
+        <div class="box-item box-13"><strong>#13</strong><span>W:152px H:98px | P:13px | B:2px dotted | M:7px 14px</span></div>
+        <div class="box-item box-14"><strong>#14</strong><span>W:158px H:98px | P:15px | B:4px solid | M:8px 10px</span></div>
+        <div class="box-item box-15"><strong>#15</strong><span>W:162px H:100px | P:12px | B:3px double | M:6px 8px</span></div>
+        <div class="box-item box-16"><strong>#16</strong><span>W:144px H:92px | P:10px 8px | B:2px solid | M:5px</span></div>
+        <div class="box-item box-17"><strong>#17</strong><span>W:148px H:94px | P:12px 10px | B:3px solid | M:6px</span></div>
+        <div class="box-item box-18"><strong>#18</strong><span>W:152px H:96px | P:14px 12px | B:2px dashed | M:7px</span></div>
+        <div class="box-item box-19"><strong>#19</strong><span>W:156px H:98px | P:16px 14px | B:3px dotted | M:8px</span></div>
+        <div class="box-item box-20"><strong>#20</strong><span>W:164px H:102px | P:18px 14px | B:4px solid | M:10px</span></div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 2: 20 PROPRIEDADES DE FLEXBOX RESPONSIVAS -->
+    <section id="flexbox" class="secao">
+      <h2>2. Laboratório Responsivo de Flexbox (20 Propriedades)</h2>
+      <p class="subtitulo">
+        Contêineres e itens flexíveis adaptáveis a desktop e mobile demonstrando 20 propriedades Flexbox.
+      </p>
+
+      <div class="flex-demo flex-row-between">
+        <div class="chip">justify-content: space-between</div>
+        <div class="chip">align-items: center</div>
+        <div class="chip">flex-direction: row</div>
+      </div>
+
+      <div class="flex-demo flex-row-reverse">
+        <div class="chip">1º no HTML (row-reverse)</div>
+        <div class="chip">2º no HTML</div>
+        <div class="chip">3º no HTML</div>
+      </div>
+
+      <div class="flex-demo flex-around-evenly">
+        <div class="chip">justify-content: space-around</div>
+        <div class="chip">row-gap: 12px</div>
+        <div class="chip">column-gap: 16px</div>
+      </div>
+
+      <div class="flex-demo flex-multilinha">
+        <div class="chip">flex-flow: row wrap</div>
+        <div class="chip">align-content: space-between</div>
+        <div class="chip">justify-content: space-evenly</div>
+        <div class="chip">flex-wrap: wrap</div>
+      </div>
+
+      <div class="flex-demo flex-itens-avancados">
+        <div class="chip item-order">order: 3 (flex-grow: 1)</div>
+        <div class="chip item-grow">order: 1 (flex-grow: 2)</div>
+        <div class="chip item-self">order: 2 (align-self: flex-end)</div>
+      </div>
+
+      <div class="flex-demo flex-colunas">
+        <div class="chip">flex-direction: column-reverse (Item A)</div>
+        <div class="chip">flex-basis: auto / flex-shrink: 1 (Item B)</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
